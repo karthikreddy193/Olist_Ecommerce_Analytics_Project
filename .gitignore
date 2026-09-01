@@ -1,0 +1,10 @@
+# Exclude raw dataset files
+data/
+*.csv
+*.xlsx
+
+# Exclude Jupyter checkpoints & system cache
+.ipynb_checkpoints/
+__pycache__/
+.DS_Store
+Thumbs.db
