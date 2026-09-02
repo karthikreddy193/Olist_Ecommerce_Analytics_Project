@@ -1,8 +1,8 @@
-# Olist E-Commerce Analytics: Supply Chain & Margin Leakage Cockpit
+# Olist E-Commerce Analytics: Customer Fulfillment & Margin Leakage Cockpit
 
 ## Project Overview:
 
-This end-to-end data analytics project analyzes **13.59M BRL in Gross Merchandise Volume (GMV)** across **96K delivered orders** for Olist, a Brazilian e-commerce platform (2016–2018). The goal was to identify supply chain bottlenecks causing delayed deliveries and pinpoint specific product categories negatively impacting profit margins due to disproportionate freight costs.
+This end-to-end data analytics project analyzes **13.59M BRL in Gross Merchandise Volume (GMV)** across **96K delivered orders** for Olist, a Brazilian e-commerce platform (2016–2018). The goal was to identify fulfillment bottlenecks causing delayed deliveries, monitor delivery SLA performance, and pinpoint specific product categories negatively impacting profit margins due to disproportionate freight costs.
 
 ---
 
@@ -20,20 +20,20 @@ This end-to-end data analytics project analyzes **13.59M BRL in Gross Merchandis
 
 ## Key Findings & Business Impact:
 
-* **Revenue Scale & Demand:** The platform demonstrated significant, sustained revenue growth from early 2017 through mid-2018, peaking at over **1M BRL monthly**. This proves strong market demand that is currently being bottlenecked by regional logistics challenges.
-* **National vs. Regional Logistics Bottlenecks:** Quantified a baseline **8.1% national delivery SLA breach rate**. However, isolated last-mile bottlenecks in the Northeast corridor—led by Alagoas (AL at **23.9%**) and Maranhão (MA at **19.7%**)—exhibit delay rates nearly triple the national average.  
+* **Revenue Scale & Demand:** The platform demonstrated significant, sustained revenue growth from early 2017 through mid-2018, peaking at over **1M BRL monthly**. This proves strong market demand that is currently being bottlenecked by regional fulfillment challenges.
+* **National vs. Regional Logistics Bottlenecks:** Quantified a baseline **8.1% national delivery SLA breach rate**. However, isolated last-mile bottlenecks in the Northeast corridor—led by Alagoas (AL at **23.9%**) and Maranhão (MA at **19.7%**)—exhibit delay rates nearly triple the national average.
   * *Recommendation:* Critically re-evaluate carrier contracts or establish closer distribution centers for this region.
 * **First-Mile Seller Latency:** Identified critical first-mile delays where specific seller hubs generated late carrier handoffs past the designated shipping limit date on **over 15% of dispatches**.
-* **Margin Leakage via Freight Absorption:** Uncovered that logistics costs average **16.57% of GMV** overall. Scatter plot analysis revealed specific low-ticket, high-cube product categories experiencing freight expenses **>25% of item value**.  
+* **Margin Leakage via Freight Absorption:** Uncovered that logistics costs average **16.57% of GMV** overall. Scatter plot analysis revealed specific low-ticket, high-cube product categories experiencing freight expenses **>25% of item value**.
   * *Recommendation:* These specific "margin leakers" are significantly eroding marketplace take-rates and require immediate pricing restructuring or specialized shipping strategies.
 
 ---
 
 ## Tools & Pipeline:
 
-* **Python (Pandas):** Extracted and cleaned over 100,000 raw e-commerce records, handling missing values and formatting dates.
-* **MySQL:** Loaded the cleaned data into a relational database and executed complex queries to calculate delivery times, SLA breach rates, and margin metrics.
-* **Power BI:** Engineered an interactive dashboard utilizing custom DAX measures to visualize key performance indicators for executive stakeholders.
+* **Python (Pandas):** Automated data extraction, type conversion, date formatting, and null-handling across 100,000+ records to prepare clean relational tables for database loading.
+* **MySQL:** Built a Star Schema (fact and dimension tables) and executed SQL queries using CTEs, window functions, and multi-table joins to analyze delivery timelines, SLA breach rates, and margin leakage metrics.
+* **Power BI:** Engineered an interactive dashboard utilizing custom DAX measures, time-intelligence calculations, and dimensional filtering to visualize key business KPIs for executive stakeholders.
 
 ---
 
@@ -48,7 +48,9 @@ This end-to-end data analytics project analyzes **13.59M BRL in Gross Merchandis
 ```text
 ├── Exported_Results_from_MYSQL/              # Query outputs exported from MySQL analysis
 ├── SQL_Codes_for_ExportedResults_from_MYSQL/ # SQL scripts (SLA breach, margin leakage, handoffs)
-├── Global_Ecommerce_project_PY-To-SQL.ipynb   # Python ETL & database load notebook
-├── Global_Ecommerce_SupplyChain_DASHBOARD.pbix# Interactive Power BI dashboard file
+├── Global_Ecommerce_project_PY-To-SQL-Connection.ipynb # Python ETL & database load notebook
+├── Global_Ecommerce_SupplyChain_DASHBOARD.pbix       # Interactive Power BI dashboard file
 ├── dashboard_preview.png                     # Dashboard snapshot
 └── README.md                                 # Project documentation
+
+
