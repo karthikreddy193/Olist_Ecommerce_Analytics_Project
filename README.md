@@ -53,4 +53,3 @@ This end-to-end data analytics project analyzes **13.59M BRL in Gross Merchandis
 ├── dashboard_preview.png                     # Dashboard snapshot
 └── README.md                                 # Project documentation
 
-
