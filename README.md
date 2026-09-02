@@ -49,7 +49,7 @@ This end-to-end data analytics project analyzes **13.59M BRL in Gross Merchandis
 ├── Exported_Results_from_MYSQL/              # Query outputs exported from MySQL analysis
 ├── SQL_Codes_for_ExportedResults_from_MYSQL/ # SQL scripts (SLA breach, margin leakage, handoffs)
 ├── Global_Ecommerce_project_PY-To-SQL-Connection.ipynb # Python ETL & database load notebook
-├── Global_Ecommerce_SupplyChain_DASHBOARD.pbix       # Interactive Power BI dashboard file
+├── Global_Ecommerce_Fulfillment_DASHBOARD.pbix       # Interactive Power BI dashboard file
 ├── dashboard_preview.png                     # Dashboard snapshot
 └── README.md                                 # Project documentation
 
